@@ -9,8 +9,12 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        // This splits third-party node_modules (like icon packs) into their own files
         manualChunks(id) {
+          // If it's a core React package, keep it in the main bundle to prevent initialization errors
+          if (id.includes('node_modules/react/') || id.includes('node_modules/react-dom/')) {
+            return 'vendor-core';
+          }
+          // Split out other heavy node_modules (like icon packs or 3D loaders)
           if (id.includes('node_modules')) {
             return id.toString().split('node_modules/')[1].split('/')[0].toString();
           }
