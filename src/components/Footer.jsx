@@ -1,6 +1,7 @@
-import "remixicon/fonts/remixicon.css";
 import Dock from "./Dock/Dock";
 import { VscHome, VscArchive, VscAccount } from "react-icons/vsc";
+// Import the specific Remix Icons via react-icons/ri (Tree-shakeable)
+import { RiGithubFill, RiInstagramFill, RiYoutubeFill } from "react-icons/ri";
 
 const Footer = () => {
   const items = [
@@ -20,10 +21,16 @@ const Footer = () => {
         </h1>
 
         {/* Ikon Sosmed - di tengah di mobile */}
-        <div className="flex gap-3 order-2 md:order-none">
-          <a href="https://github.com/Sujay-sys" target="_blank" rel="noreferrer"><i className="ri-github-fill ri-2x"></i></a>
-          <a href="https://www.instagram.com/acoustic._sujay/" target="_blank" rel="noreferrer"><i className="ri-instagram-fill ri-2x"></i></a>
-          <a href="https://www.youtube.com/@acoustic._sujay" target="_blank" rel="noreferrer"><i className="ri-youtube-fill ri-2x"></i></a>
+        <div className="flex gap-4 order-2 md:order-none text-gray-300 hover:text-white transition-colors">
+          <a href="https://github.com/Sujay-sys" target="_blank" rel="noreferrer">
+            <RiGithubFill size={32} />
+          </a>
+          <a href="https://www.instagram.com/acoustic._sujay/" target="_blank" rel="noreferrer">
+            <RiInstagramFill size={32} />
+          </a>
+          <a href="https://www.youtube.com/@acoustic._sujay" target="_blank" rel="noreferrer">
+            <RiYoutubeFill size={32} />
+          </a>
         </div>
 
         {/* Dock - paling bawah di mobile */}
