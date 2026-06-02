@@ -2,7 +2,7 @@
 
 A modern, interactive portfolio website showcasing AI-powered applications, machine learning solutions, and full-stack web development projects. Built with cutting-edge technologies including React, Three.js, and Tailwind CSS.
 
-🔗
+🔗 Live Portfoilo:- https://portfolio-ten-steel-sqkfmqwlt9.vercel.app/
 
 ---
 
